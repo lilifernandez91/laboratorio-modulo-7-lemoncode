@@ -1,11 +1,10 @@
 import {
     puntos,
-    cartas,
     imageSrc,
     backImageSrc
 } from './modelo'
 
-export const generarCartaAleatoria = (): number => {
+export const generarCartaAleatoria = (cartas: number[]): number => {
     const indiceAleatorio = Math.floor(Math.random() * cartas.length)
     return cartas[indiceAleatorio]
 }
@@ -40,3 +39,6 @@ export const obtenerImagenSrc = (carta: number): string => {
 export const iniciarPartida = () => {
     puntos.puntuacion = 0
 }
+
+
+

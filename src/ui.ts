@@ -2,6 +2,7 @@ import * as confetti from 'canvas-confetti';
 
 import {
     backImageSrc,
+    cartas,
     puntos
 } from './modelo'
 
@@ -21,7 +22,7 @@ const mePlanto = document.getElementById('planto')
 const despuesDePlantarse = document.getElementById('despues-plantarse')
 
 export const pideCarta = () => {
-    const cartaAleatoria = generarCartaAleatoria()
+    const cartaAleatoria = generarCartaAleatoria(cartas)
     calcularPuntuacion(cartaAleatoria)
     muestraPuntuacion()
     const imageSrc = obtenerImagenSrc(cartaAleatoria)
